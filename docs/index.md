@@ -14,56 +14,29 @@ hero:
       link: /guide/
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+
+const stages = [
+  { emoji: '🤰', title: '孕期准备', desc: '叶酸 · 产检 · 待产包 · 给自己的多巴胺清单', link: '/stages/prenatal' },
+  { emoji: '👶', title: '0-3M · 感官校准期', desc: '趴着 · 看脸 · 听说话 · 被抱着 — 最简单也最重要的事', link: '/stages/0-3m' },
+  { emoji: '🙌', title: '3-6M · 运动萌芽期', desc: '第一次翻身 · 小手抓住世界 · 咿呀对话开始了', link: '/stages/3-6m' },
+  { emoji: '🚀', title: '6-12M · 移动革命期', desc: '用爬行征服客厅 · 躲猫猫 · 第一口辅食的惊喜', link: '/stages/6-12m' },
+  { emoji: '🗣️', title: '1-3Y · 语言爆发期', desc: '从 mama 到十万个为什么 · 绘本 · 泥巴 · 踩水坑', link: '/stages/1-3y' },
+  { emoji: '🧩', title: '3-5Y · 执行功能期', desc: '桌游 · 运动 · 户外两小时 · 和小朋友的江湖', link: '/stages/3-5y' },
+]
+</script>
+
 <div class="timeline-section">
   <h2 class="timeline-title">🗺️ 成长地图</h2>
   <p class="timeline-subtitle">每个阶段都是一个小宇宙，点击探索装备清单与发展里程碑</p>
 
   <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-marker">🤰</div>
-      <a class="timeline-content" href="/stages/prenatal">
-        <h3>孕期准备</h3>
-        <p>叶酸 · 产检 · 待产包 · 给自己的多巴胺清单</p>
-        <span class="timeline-link">查看详情 →</span>
-      </a>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker">👶</div>
-      <a class="timeline-content" href="/stages/0-3m">
-        <h3>0-3M · 感官校准期</h3>
-        <p>趴着 · 看脸 · 听说话 · 被抱着 — 最简单也最重要的事</p>
-        <span class="timeline-link">查看详情 →</span>
-      </a>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker">🙌</div>
-      <a class="timeline-content" href="/stages/3-6m">
-        <h3>3-6M · 运动萌芽期</h3>
-        <p>第一次翻身 · 小手抓住世界 · 咿呀对话开始了</p>
-        <span class="timeline-link">查看详情 →</span>
-      </a>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker">🚀</div>
-      <a class="timeline-content" href="/stages/6-12m">
-        <h3>6-12M · 移动革命期</h3>
-        <p>用爬行征服客厅 · 躲猫猫 · 第一口辅食的惊喜</p>
-        <span class="timeline-link">查看详情 →</span>
-      </a>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker">🗣️</div>
-      <a class="timeline-content" href="/stages/1-3y">
-        <h3>1-3Y · 语言爆发期</h3>
-        <p>从 mama 到十万个为什么 · 绘本 · 泥巴 · 踩水坑</p>
-        <span class="timeline-link">查看详情 →</span>
-      </a>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker">🧩</div>
-      <a class="timeline-content" href="/stages/3-5y">
-        <h3>3-5Y · 执行功能期</h3>
-        <p>桌游 · 运动 · 户外两小时 · 和小朋友的江湖</p>
+    <div class="timeline-item" v-for="s in stages" :key="s.link">
+      <div class="timeline-marker">{{ s.emoji }}</div>
+      <a class="timeline-content" :href="withBase(s.link)">
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.desc }}</p>
         <span class="timeline-link">查看详情 →</span>
       </a>
     </div>
@@ -72,5 +45,8 @@ hero:
 
 <div class="home-quote">
   <p class="quote-main">为追求生活质感的未来父母，量身调优的育儿手册</p>
-  <p class="quote-sub">所有推荐基于 AAP · WHO · CDC · NHS · CPSC 循证指南<br>价格数据来自 2024-2026 年中国市场公开记录<br><br>欢迎转发给每一位即将迎来新生命的朋友 ❤️</p>
+  <p class="quote-sub">所有推荐基于 AAP · WHO · CDC · NHS · CPSC 循证指南<br>价格数据来自 2024-2026 年中国市场公开记录</p>
+  <div class="share-hint">
+    <p>💌 觉得有用？点右上角 <strong>···</strong> 转发给需要的朋友</p>
+  </div>
 </div>

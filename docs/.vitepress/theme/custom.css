@@ -326,6 +326,20 @@
   color: var(--vp-c-text-3);
 }
 
+.share-hint {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--vp-c-brand-soft);
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.share-hint p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}
+
 /* ---------- 9. Sidebar ---------- */
 
 .VPSidebar {
@@ -526,7 +540,88 @@
   }
 }
 
-/* ---------- 14. Print Styles ---------- */
+/* ---------- 14. WeChat / Mobile Optimization ---------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .VPNav .VPNavBarTitle .title {
+    font-size: 0.95rem !important;
+  }
+
+  .vp-doc h1 {
+    font-size: 1.5rem;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .vp-doc h3 {
+    font-size: 1.05rem;
+  }
+
+  .vp-doc {
+    line-height: 1.9;
+    font-size: 0.95rem;
+  }
+
+  .vp-doc blockquote {
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .vp-doc .custom-block {
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .verdict {
+    padding: 0.2rem 0.55rem;
+    font-size: 0.7rem;
+  }
+
+  .home-quote {
+    padding: 1.5rem 1rem;
+    margin: 2rem auto 1rem;
+  }
+
+  .timeline-content {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .VPHero .name {
+    font-size: 1.8rem !important;
+  }
+
+  .VPHero .text {
+    font-size: 1.2rem !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 0.95rem !important;
+  }
+
+  .VPHero .actions .action {
+    min-height: 44px;
+  }
+
+  .VPDocFooter {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ---------- 15. Print Styles ---------- */
 
 @media print {
   .VPNav,

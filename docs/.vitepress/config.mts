@@ -7,6 +7,7 @@ export default defineConfig({
   description: '0-5岁循证育儿指南 — 基于AAP/WHO/CDC/NHS科学指南，拒绝智商税，拥抱高质感多巴胺',
 
   head: [
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover' }],
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
@@ -14,6 +15,10 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: '小宇宙成长手册 — 0-5岁循证育儿指南' }],
     ['meta', { property: 'og:description', content: '基于AAP/WHO/CDC循证指南，拒绝智商税，拥抱高质感多巴胺。欢迎分享给即将迎来新生命的朋友。' }],
     ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:image', content: 'https://linyuhancelia.github.io/linyuhan-baby-guide/og-cover.svg' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
+    ['meta', { name: 'format-detection', content: 'telephone=no' }],
   ],
 
   themeConfig: {

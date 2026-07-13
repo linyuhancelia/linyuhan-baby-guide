@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBF8F4"/>
+      <stop offset="100%" style="stop-color:#F0EBE5"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4956A"/>
+      <stop offset="100%" style="stop-color:#A47B55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#brand)"/>
+  <text x="600" y="220" text-anchor="middle" font-family="system-ui,sans-serif" font-size="72" font-weight="700" fill="#C4956A">小宇宙成长手册</text>
+  <text x="600" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="36" fill="#3D3633">0-5岁循证育儿指南</text>
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui,sans-serif" font-size="80">🤰 👶 🙌 🚀 🗣️ 🧩</text>
+  <text x="600" y="460" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" fill="#7A706A">基于 AAP · WHO · CDC 循证指南</text>
+  <text x="600" y="510" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#A09890">拒绝智商税，拥抱高质感多巴胺</text>
+  <rect x="0" y="624" width="1200" height="6" fill="url(#brand)"/>
+</svg>
