@@ -1,0 +1,550 @@
+/* ==========================================================================
+   科学母婴看板 — Custom Theme
+   Warm Nordic palette · CJK-optimized typography · Premium table styling
+   ========================================================================== */
+
+/* ---------- 1. CSS Variable Overrides ---------- */
+
+:root {
+  --vp-c-brand-1: #C4956A;
+  --vp-c-brand-2: #D4A574;
+  --vp-c-brand-3: #A47B55;
+  --vp-c-brand-soft: rgba(196, 149, 106, 0.12);
+
+  --vp-c-bg: #FBF8F4;
+  --vp-c-bg-alt: #F5F1EC;
+  --vp-c-bg-soft: #F0EBE5;
+  --vp-c-bg-elv: #FFFFFF;
+
+  --vp-c-text-1: #3D3633;
+  --vp-c-text-2: #7A706A;
+  --vp-c-text-3: #A09890;
+
+  --vp-c-divider: rgba(161, 148, 138, 0.2);
+
+  --vp-c-default-1: #3D3633;
+  --vp-c-default-2: #7A706A;
+  --vp-c-default-3: #A09890;
+  --vp-c-default-soft: rgba(161, 148, 138, 0.1);
+
+  --vp-c-tip-1: #8B9D83;
+  --vp-c-tip-2: #6B7D63;
+  --vp-c-tip-3: #4B5D43;
+  --vp-c-tip-soft: rgba(139, 157, 131, 0.12);
+
+  --vp-c-warning-1: #D4A03C;
+  --vp-c-warning-2: #B48830;
+  --vp-c-warning-3: #947024;
+  --vp-c-warning-soft: rgba(212, 160, 60, 0.12);
+
+  --vp-c-danger-1: #C47070;
+  --vp-c-danger-2: #A45858;
+  --vp-c-danger-3: #844040;
+  --vp-c-danger-soft: rgba(196, 112, 112, 0.12);
+
+  --color-sage: #8B9D83;
+  --color-amber: #D4A03C;
+  --color-rose: #C47070;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #C4956A 0%, #A47B55 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(196,149,106,0.15) 0%, transparent 70%);
+  --vp-home-hero-image-filter: none;
+
+  --vp-button-brand-bg: #C4956A;
+  --vp-button-brand-hover-bg: #D4A574;
+  --vp-button-brand-active-bg: #A47B55;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #FFFFFF;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+}
+
+.dark {
+  --vp-c-bg: #1C1917;
+  --vp-c-bg-alt: #231F1C;
+  --vp-c-bg-soft: #2A2521;
+  --vp-c-bg-elv: #2A2521;
+
+  --vp-c-text-1: #E8E0D8;
+  --vp-c-text-2: #B0A89E;
+  --vp-c-text-3: #807870;
+
+  --vp-c-divider: rgba(200, 190, 180, 0.15);
+
+  --vp-c-brand-1: #D4A574;
+  --vp-c-brand-2: #C4956A;
+  --vp-c-brand-3: #E4B584;
+  --vp-c-brand-soft: rgba(212, 165, 116, 0.15);
+}
+
+/* ---------- 2. Typography ---------- */
+
+:root {
+  --vp-font-family-base: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: 'LXGW WenKai Screen', 'PingFang SC', 'Hiragino Sans GB', serif;
+  font-weight: 600;
+}
+
+.vp-doc {
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+}
+
+.vp-doc h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vp-doc h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--vp-c-brand-soft);
+  margin-top: 3rem;
+}
+
+.vp-doc h3 {
+  font-size: 1.2rem;
+  color: var(--vp-c-brand-1);
+  margin-top: 2rem;
+}
+
+.vp-doc h4 {
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+  color: var(--vp-c-text-2);
+}
+
+/* ---------- 3. Table Styling ---------- */
+
+.vp-doc table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+
+.vp-doc table th {
+  background: var(--vp-c-brand-1);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: none;
+  font-family: 'Inter', 'PingFang SC', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.vp-doc table td {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  vertical-align: top;
+  line-height: 1.7;
+}
+
+.vp-doc table tr:last-child td {
+  border-bottom: none;
+}
+
+.vp-doc table tr:nth-child(even) td {
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc table tr:hover td {
+  background: var(--vp-c-brand-soft);
+  transition: background 0.2s ease;
+}
+
+.dark .vp-doc table th {
+  background: #A47B55;
+}
+
+/* ---------- 4. Mobile Table ---------- */
+
+@media (max-width: 768px) {
+  .vp-doc table {
+    font-size: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .vp-doc table th {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .vp-doc table td {
+    padding: 0.5rem 0.6rem;
+    line-height: 1.6;
+  }
+}
+
+/* ---------- 5. Verdict Badges ---------- */
+
+.verdict {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.verdict-essential {
+  background: var(--color-sage);
+  color: #FFFFFF;
+}
+
+.verdict-conditional {
+  background: var(--color-amber);
+  color: #FFFFFF;
+}
+
+.verdict-tax {
+  background: var(--color-rose);
+  color: #FFFFFF;
+}
+
+/* ---------- 6. Custom Containers ---------- */
+
+.vp-doc .custom-block {
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border: none;
+  border-left: 4px solid;
+}
+
+.vp-doc .custom-block.tip {
+  border-left-color: var(--color-sage);
+  background: rgba(139, 157, 131, 0.08);
+}
+
+.vp-doc .custom-block.warning {
+  border-left-color: var(--color-amber);
+  background: rgba(212, 160, 60, 0.08);
+}
+
+.vp-doc .custom-block.info {
+  border-left-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.vp-doc .custom-block.danger {
+  border-left-color: var(--color-rose);
+  background: rgba(196, 112, 112, 0.08);
+}
+
+.vp-doc .custom-block-title {
+  font-weight: 600;
+  font-family: 'LXGW WenKai Screen', serif;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- 7. Blockquotes ---------- */
+
+.vp-doc blockquote {
+  background: var(--vp-c-bg-alt);
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--vp-c-text-2);
+  font-style: normal;
+  line-height: 1.85;
+}
+
+.vp-doc blockquote p {
+  margin: 0.3rem 0;
+}
+
+/* ---------- 8. Home Page ---------- */
+
+.VPHome .VPFeatures .VPFeature {
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.VPHome .VPFeatures .VPFeature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(196, 149, 106, 0.15);
+}
+
+.VPHero .tagline {
+  font-size: 1.1rem !important;
+  color: var(--vp-c-text-2) !important;
+  line-height: 1.8;
+}
+
+.VPHero .name {
+  font-family: 'LXGW WenKai Screen', serif !important;
+}
+
+.VPHero .text {
+  font-family: 'LXGW WenKai Screen', serif !important;
+}
+
+/* Home page custom quote section */
+.home-quote {
+  max-width: 680px;
+  margin: 3rem auto 2rem;
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--vp-c-text-2);
+  font-size: 1rem;
+  line-height: 2;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.home-quote .quote-main {
+  font-family: 'LXGW WenKai Screen', serif;
+  font-size: 1.15rem;
+  color: var(--vp-c-text-1);
+  margin-bottom: 1rem;
+}
+
+.home-quote .quote-sub {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-3);
+}
+
+/* ---------- 9. Sidebar ---------- */
+
+.VPSidebar {
+  font-size: 0.9rem;
+}
+
+.VPSidebarItem.is-active > .item > .indicator {
+  background: var(--vp-c-brand-1);
+}
+
+/* ---------- 10. Content Width & Spacing ---------- */
+
+.vp-doc {
+  max-width: 780px;
+}
+
+.vp-doc hr {
+  border-color: var(--vp-c-divider);
+  margin: 2.5rem 0;
+}
+
+.vp-doc strong {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+.vp-doc a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--vp-c-brand-soft);
+  transition: border-color 0.2s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* ---------- 11. Code Block ---------- */
+
+.vp-doc div[class*='language-'] {
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-3);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.88em;
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: rgba(212, 165, 116, 0.15);
+  color: var(--vp-c-brand-2);
+}
+
+/* ---------- 12. Scroll Hint (Mobile) ---------- */
+
+@media (max-width: 768px) {
+  .vp-doc .table-wrapper {
+    position: relative;
+  }
+
+  .vp-doc .table-wrapper::after {
+    content: '← 左右滑动查看完整表格 →';
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--vp-c-text-3);
+    padding: 0.3rem 0;
+    opacity: 0.7;
+  }
+}
+
+/* ---------- 13. Timeline Section ---------- */
+
+.timeline-section {
+  max-width: 680px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.timeline-title {
+  text-align: center;
+  font-family: 'LXGW WenKai Screen', serif;
+  font-size: 1.6rem;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-subtitle {
+  text-align: center;
+  color: var(--vp-c-text-3);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 0.5rem 0 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--vp-c-brand-1), var(--vp-c-brand-soft));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: var(--vp-c-bg);
+  border: 3px solid var(--vp-c-brand-1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  display: block;
+  background: var(--vp-c-bg-alt);
+  border-radius: 12px;
+  padding: 1rem 1.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.timeline-content:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(196, 149, 106, 0.15);
+  border-bottom: none !important;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-family: 'LXGW WenKai Screen', serif;
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.timeline-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: var(--vp-c-brand-1);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 0 1rem;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-marker {
+    left: 2px;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline-content {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* ---------- 14. Print Styles ---------- */
+
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPLocalNav {
+    display: none !important;
+  }
+
+  .vp-doc table th {
+    background: #E5D5C5 !important;
+    color: #333 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .verdict {
+    border: 1px solid currentColor;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
